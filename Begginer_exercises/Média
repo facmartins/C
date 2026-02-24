@@ -1,0 +1,26 @@
+/******************************************************************************
+
+Elabore um programa em C que solicite ao utilizador dois números inteiros e 
+o resultado da média dos dois números.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int n1=0, n2=0;
+    float media=0.0;
+    
+    printf("Insira um número: ");
+    scanf("%d", &n1);
+    
+    printf("\nInsira um número: ");
+    scanf("%d", &n2);
+    
+    media=(float) (n1+n2)/2;
+    
+    printf("\nA média de %d e de %d é de: %.2f",n1,n2, media);
+   // printf("\nA média dos números é: %.2f", media);
+
+    return 0;
+}
