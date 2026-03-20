@@ -1,0 +1,50 @@
+1. Escreva um programa em C que peça ao utilizador que introduza dois números decimais 
+e apresente o resultado da operação que pretende efetuar, inserindo o símbolo do operador
+respetivo ( *, / , - , + ). A escolha da operação deve ser feita pelo utilizador. 
+Escreva o resultado da operação. 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    
+    float n1=0.0, n2=0.0;
+    char op;
+    //caracteres tem sempre que ir antes dos números!!!
+    
+        printf("----Opções----\n");
+    printf(" * -> Multiplicação\n");
+    printf(" / -> Divisão\n");
+    printf(" - -> Subtração\n");
+    printf(" + -> Soma\n");
+    
+    //fflush(stdin);
+    
+    printf("Escolha a sua opção (*,/,-,+):");
+    scanf("%c",&op);
+    
+    printf("Digite o primeiro número:");
+    scanf("%f", &n1);
+    printf("Digite o segundo número:");
+    scanf("%f", &n2);
+    
+    switch(op){
+        case '*':
+            printf("%.2f * %.2f = %.2f",n1,n2,(n1*n2) );
+            break;
+        case '/':
+            printf("%.2f * %.2f = %.2f",n1,n2,(n1/n2) );
+            break;
+         case '-':
+            printf("%.2f * %.2f = %.2f",n1,n2,(n1-n2) );
+            break;
+        case '+':
+            printf("%.2f * %.2f = %.2f",n1,n2,(n1+n2) );
+            break;
+        default:
+            printf("Opção inválida.");
+    }
+    
+    return 0;
+}
